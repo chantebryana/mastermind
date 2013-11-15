@@ -11,7 +11,7 @@ def codebreakerBoard(board)
  cBreak = "  "
  c01 = 1
  c02 = "----"
- c03 = "...." #dots temporary place-holders
+ c03 = "...." #dots temp place-holders
  c01bWidth = c01aSpaces = c02.size
  puts board.map { |i|
   c01cSpaceRemainder = c01bWidth - c01.to_s.size
