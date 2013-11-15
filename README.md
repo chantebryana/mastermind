@@ -1,0 +1,4 @@
+mastermind
+==========
+
+First programming assignment
