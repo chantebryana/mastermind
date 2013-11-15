@@ -24,4 +24,5 @@ end
 
 board = [1,2,3,4,5,6,7,8,9,10]
 
-puts codebreakerBoard(board),codebreakerGuess
+codebreakerBoard(board)
+puts codebreakerGuess
