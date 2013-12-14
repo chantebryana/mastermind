@@ -1,0 +1,62 @@
+Welcome to Git (version 1.8.4-preview20130916)
+
+
+Run 'git help git' to display the help index.
+Run 'git help <command>' to display help for specific commands.
+
+Chauncy@LITTLECHAUNCY ~
+$ pwd
+/c/Users/Chauncy
+
+Chauncy@LITTLECHAUNCY ~
+$ cd Desktop/Chauncy\'s\ Secret\ Codes/Mastermind/Mastermind
+
+Chauncy@LITTLECHAUNCY ~/Desktop/Chauncy's Secret Codes/Mastermind/Mastermind ((8
+71ea6b...))
+$ ls
+README.md  mastermind.rb
+
+Chauncy@LITTLECHAUNCY ~/Desktop/Chauncy's Secret Codes/Mastermind/Mastermind ((8
+71ea6b...))
+$ git checkout master
+M       mastermind.rb
+Switched to branch 'master'
+
+Chauncy@LITTLECHAUNCY ~/Desktop/Chauncy's Secret Codes/Mastermind/Mastermind (ma
+ster)
+$ git add mastermind.rb
+
+Chauncy@LITTLECHAUNCY ~/Desktop/Chauncy's Secret Codes/Mastermind/Mastermind (ma
+ster)
+$ git commit -m "adjusted comment for ...."
+[master aeb69ac] adjusted comment for ....
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Chauncy@LITTLECHAUNCY ~/Desktop/Chauncy's Secret Codes/Mastermind/Mastermind (ma
+ster)
+$ git push
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+
+Counting objects: 5, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:chantebryana/mastermind.git
+   871ea6b..aeb69ac  master -> master
+
+Chauncy@LITTLECHAUNCY ~/Desktop/Chauncy's Secret Codes/Mastermind/Mastermind (ma
+ster)
+$

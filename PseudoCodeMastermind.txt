@@ -1,0 +1,38 @@
+0 1 2 3 |
+_ _ _ _ | _ _ _ _
+
+ X = match # and position
+ O = match # only
+
+===	===	===
+VALID TURN / WINNING CONDITIONS
+ if it's the 11th turn and nothing matches the master code, print "Out of turns! Codemaster wins!"
+ if all of the numbers exactly match the master code (0 for 0, 1 for 1, 2 for 2, 3 for 3), print "Code Breaker, you win! Congratulations!"
+ if 0 matches master code's 0 (ie, both number and position match), then place "X" in column 3. Continue for remaining numbers (1 for 1, 2 for 2, 3 for 3). 
+ if 0 matches master code 1, 2, and/or 3, place "O" in column 3. Continue for remaining numbers (1 for 0,2,3; 2 for 0,1,3; 3 for 0,1,2).
+ if it's turn 1 through 10 and nothing matches master code, print "Sorry no matches. Try again."
+
+Print updated board after each guess.
+
+===	===	===
+
+How do I have the board check 0 for 0; 1 for 0,2,3; etc? I imagine I'll use an array somehow for at least part of this loop.
+Also, do I need to do anything special for the "X" and "O" to appear as expected in column 3?
+
+<><><><><><><><><><><><><><>
+
+VALID MOVE
+Only numbers 1,2,3,4,5,6 are valid.  1 to 4 of them can be used in the Master Code.  The Master Code must be 4 digits (no more no less). It cannot contain any other digits (ie, letters, symbols, other numbers). These same rules apply to to the Code Breaker's guesses.
+ return true if codeDigit > 0 or codeDigit < 7
+ else return false
+
+Somehow also define that the code can only contain 4 digits.  Perhaps it will be part of the board definition, or part of the final play definition??  IDK.
+
+<><><><><><><><><><><><><><>
+REPRINTING BOARD
+Figure out a way to reprint the board with the updated turn information.
+
+<><><><><><><><><><><><><><>
+2013-12-02 JIM SAYS: focus on beginning parts: getting codemaster code; getting codebreaker code; scoring the codebreaker against the codemaster (ie valid turn / winning conditions thoughts).  Afteer that, it's easy to put the pieces together into pretty loop-de-loops
+
+2013-11-15 Many remaining details seem like icing on the cake.  These include defining the actual sentences to print to prompt the user to do a thing / notify them that they've won, etc.  Additional potential things to consider would be to add a parameter that assigns points depending on how well/quickly the Code Breaker broke the code.  I also need to determine exactly how to print the board and how to integrate the board into the above rules that I need to further define.

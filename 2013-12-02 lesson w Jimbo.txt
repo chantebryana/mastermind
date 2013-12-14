@@ -1,0 +1,106 @@
+2013-12-02 LESSON W/ JIMBO
+
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation.  All rights reserved.
+
+C:\Users\Chauncy>cd "Desktop\Chauncy's Secret Codes\Mastermind\mastermind"
+
+C:\Users\Chauncy\Desktop\Chauncy's Secret Codes\Mastermind\mastermind>irb
+irb(main):001:0> myvar = gets
+X
+=> "X\n"
+irb(main):002:0> puts myvar
+X
+=> nil
+irb(main):003:0> secretcode = gets
+2345
+=> "2345\n"
+irb(main):004:0> 0.upto(secretcode.length-1){|i|puts secretcode[i]}
+2
+3
+4
+5
+
+=> 0
+irb(main):005:0> secretcode.split("")
+=> ["2", "3", "4", "5", "\n"]
+irb(main):006:0> secretcode.split("").map{|i|i.to_i}
+=> [2, 3, 4, 5, 0]
+irb(main):007:0> 0.upto(secretcode.length-1){|i|testint = secretcode[i].to_i
+irb(main):008:1> if testint > 0 and testint < 7
+irb(main):009:2>  puts secretcode[i] " is a valid code member"
+irb(main):010:2> else
+irb(main):011:2*  puts secretcode[i] " ain't quite right"
+irb(main):012:2> end
+irb(main):013:1> }
+SyntaxError: (irb):9: syntax error, unexpected tSTRING_BEG, expecting keyword_en
+d
+ puts secretcode[i] " is a valid code member"
+                     ^
+(irb):11: syntax error, unexpected tSTRING_BEG, expecting keyword_end
+ puts secretcode[i] " ain't quite right"
+                     ^
+        from C:/Ruby193/bin/irb:12:in `<main>'
+irb(main):014:0> def testcode(secretcode)
+irb(main):015:1> 0.upto(secretcode.length-1){|i|testint = secretcode[i].to_i
+irb(main):016:2> if testint > 0 and testint < 7
+irb(main):017:3>  puts secretcode[i] + " ain't quite right"
+irb(main):018:3> else
+irb(main):019:3*  puts secretcode[i] + " backwards goodness"
+irb(main):020:3> end
+irb(main):021:2> }
+irb(main):022:1> end
+=> nil
+irb(main):023:0> testcode(gets)
+712b
+7 backwards goodness
+1 ain't quite right
+2 ain't quite right
+b backwards goodness
+
+ backwards goodness
+=> 0
+irb(main):024:0> testcode(gets)
+1234
+1 ain't quite right
+2 ain't quite right
+3 ain't quite right
+4 ain't quite right
+
+ backwards goodness
+=> 0
+irb(main):025:0> testcode(gets)
+3
+3 ain't quite right
+
+ backwards goodness
+=> 0
+irb(main):026:0> testcode(gets)
+123456789
+1 ain't quite right
+2 ain't quite right
+3 ain't quite right
+4 ain't quite right
+5 ain't quite right
+6 ain't quite right
+7 backwards goodness
+8 backwards goodness
+9 backwards goodness
+
+ backwards goodness
+=> 0
+irb(main):027:0> testcode(gets[0..-2])
+12345
+1 ain't quite right
+2 ain't quite right
+3 ain't quite right
+4 ain't quite right
+5 ain't quite right
+=> 0
+irb(main):028:0> puts "Please type the secret code:"
+Please type the secret code:
+=> nil
+irb(main):029:0> gets
+here is the code
+=> "here is the code\n"
+irb(main):030:0>
