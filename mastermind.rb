@@ -8,6 +8,7 @@ end
 =end
 
 require("./testcode.rb")
+require("./scoreGuess.rb")
 
 def codemasterBoard
  puts "Codemaster, type your code: "
@@ -38,4 +39,16 @@ board = [1,2,3,4,5,6,7,8,9,10]
 codebreakerBoard(board)
 puts codebreakerGuess
 
-puts testcode(gets.chomp).inspect
+begin
+ puts "enter code 1:"
+ firstCode = gets.chomp
+end until testcode(firstCode)
+
+begin
+ puts "enter code 2:"
+ secondCode = gets.chomp
+end until testcode(secondCode)
+
+puts scoreGuess(firstCode, secondCode).inspect
+
+#puts testcode(gets.chomp).inspect

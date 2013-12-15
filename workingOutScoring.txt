@@ -12,10 +12,10 @@ score: 2 exact, 0 correct
 score: 1 exact, 0 correct
 
 3222 as master code
--**- (matchup array)
+-*** (matchup array)
 
-2256 guessed
-**-- (matchup array)
+2226 guessed
+***- (matchup array)
 score: 1 exact, 1 correct
 
 

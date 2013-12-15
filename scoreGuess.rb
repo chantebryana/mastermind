@@ -12,10 +12,27 @@ def scoreGuess(masterCode,guessCode)
  # first pass: find exact matches and 'flag' matched elements
  CODE_LENGTH.times{|i|
   if masterCode[i] == guessCode[i]
-   
+   masterMatched[i] = true
+   guessMatched[i] = true
+   matchAndPosition += 1
+  end
  }
  
  # second pass: find misaligned matches and 'flag' to prevent double counting
+ CODE_LENGTH.times{|i|
+  if masterMatched[i] == false
+   CODE_LENGTH.times{|j|
+    if guessMatched[j] == false
+     if masterCode[i] == guessCode[j]
+	  masterMatched[i] = true
+      guessMatched[j] = true
+      matchOnly += 1
+	  break
+	 end
+	end
+   }
+  end
+ }
  
  return [matchAndPosition,matchOnly]
 end
