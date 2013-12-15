@@ -1,0 +1,22 @@
+Here, we explore the process of scoring guesses in the game Mastermind. We know that codes may include number elements that are all different or with some (or all) repeating elements. We want two "output parameters" from this scoring system: the number of exact matches and the number of matches that are not aligned with the master code.
+
+1234 as master code
+
+4321 guessed
+score: 0 exact, 4 correct
+
+1256 guessed
+score: 2 exact, 0 correct
+
+3333 guessed
+score: 1 exact, 0 correct
+
+3222 as master code
+-**- (matchup array)
+
+2256 guessed
+**-- (matchup array)
+score: 1 exact, 1 correct
+
+
+2234
